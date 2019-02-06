@@ -9,6 +9,10 @@ Every "l" (el) in the string should be replaced with a "1" (one).
 */
 
 //function to obfuscate string, not to read from argv directly
+
+//loop through the text being passed and pass it through function to change a character if meeting certain conditions
+
+
 function obf(char){
  if(char.toLowerCase() === "a") {
    return 4;
@@ -43,65 +47,10 @@ console.log(read());
 
 
 
-
-
 /*
 
-
-function obf (pass) {
-  output = ''
-  var n = pass.length
-    for (var i = 0; i < n; i++) { //this seems to have the correct loop
-      if (pass.charAt(i) === 'a') {
-        console.log(pass.charAt(i))
-        output += 4
-        console.log ('-------', output)
-      }
-      else if (pass.charAt(i) === 'e') {
-        output += 3
-      }
-      else if (pass.charAt(i) === 'o') {
-        return 0
-      }
-      else if (pass.charAt(i) === 'l') {
-        return 1
-      }
-      else {
-      pass.charAt(i)
-    }
-    return output + pass.length
-    }
-}
-
-
-//read from argv and pass to obf
-function read(){
- var args = process.argv;
- var final = “”;
-
- for(var i = 0; i < args[2].length; i++){
-   final += obf(args[2].charAt(i));
- }
-
-
- return final;
-}
-
-console.log(read());
-
-*/
-
-//console.log(pass.length)
-
-//console.log(obf('password'))
-
-
-// try this method maybe ? https://www.w3schools.com/js/js_switch.asp
-
-
-
-
-/*
+- initially did not recognize this as something that needed to be looped
+-
 
 function obf (pass) {
 
@@ -123,9 +72,6 @@ function obf (pass) {
     return pass;
   }
 }
-
-
-
 
 
 console.log(obf('password'))
