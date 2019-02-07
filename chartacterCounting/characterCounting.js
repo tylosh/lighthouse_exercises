@@ -1,49 +1,16 @@
-// function countLetters(phrase) {
-//     var oneString = phrase.split(" ").join("");
-//     // console.log(oneString);
-//     var library = {
-//     }
-//     indexCheck(oneString);
-
-//     function indexCheck(reader) {
-//         for (i = 0; i < reader.length; i++) {
-//             // console.log(reader[i])
-//             if (!(reader[i] in library)) {
-//                 // console.log("it doesn't exist")
-//                 var index = reader[i];
-//                 var libr
-
-//                 console.log(index);
-//                 // library["index"] = 0;
-//                 // library["index"]++;
-//                 // console.log(library["index"])
-//             } else {
-//                 // console.log("it does exist")
-//                 // console.log(library.o)
-//             }
-//         }
-//     }
-
-//     return library;
-// }
-// // console.log(oneString);
-// // console.log(library);
-// // console.log(reader());
-
-
-
-// // console.log(countLetters("lill"));
-//console.log(countLetters("lighthouse in the house"));
-
-
+// function to take input, create and object, with each unique letter as a key
+// each key's value to be a count of occurence in the input
 
 function countLetters(phrase) {
+    //remove spaces from input
     var oneString = phrase.split(" ").join("");
-    // console.log('oneString ', oneString);
+    // test -> console.log('oneString ', oneString);
+    // empty object to send results to
     var library = {};
 
     for(let i=0; i < oneString.length; i++) {
-        // console.log("char ", oneString[i]);
+        // test -> console.log("char ", oneString[i]);
+        //if [i] character exists in object, then add one to counter, else add to object with a value of one
         if(library[oneString[i]]) {
             library[oneString[i]]++;
         } else {
@@ -53,6 +20,9 @@ function countLetters(phrase) {
     return library;
 }
 var result = countLetters("lighthouse in the house");
+
+
+//printed horizontally from above function. Probably ok, but to get closer match to answer in Compass, formatted to get it vertially
 
 function format(result){
     var str = "{ "
@@ -67,6 +37,5 @@ function format(result){
 }
 
 console.log(format(result))
-// console.log(result);
 
 
